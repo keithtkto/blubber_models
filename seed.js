@@ -25,10 +25,9 @@ Thread.remove({},function(err,result) {
           console.log(users);
 
           Thread.create([
-              {name: "Tim is the Ice King", creator: users[0]._id },
-              {name: "Yael is complaining again", creator: users[1]._id },
-              {name: "Stretch got a syntax error", creator: users[2]._id }
-
+              {name: "Tim is the Ice King", creator: users[0], creatorName: users[0].name },
+              {name: "Yael is complaining again", creator: users[1], creatorName: users[1].name },
+              {name: "Stretch got a syntax error", creator: users[2], creatorName: users[2].name }
             ], function(err, threads){
               if (err) {
                 console.log(err);
